@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: jenkinspipeline12/nodejssample:latest
+          image: jenkinspipeline12/nodejssample:20
           ports:
             - containerPort: 8080
