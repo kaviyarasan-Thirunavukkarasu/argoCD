@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: mywebapp
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: myapp
+          image: "devopsjourney1/mywebapp:latest"
+          ports:
+            - containerPort: 8080

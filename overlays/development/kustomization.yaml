@@ -1,0 +1,15 @@
+namespace: dev
+resources:
+  - ../../base
+  - namespace.yaml
+
+commonLabels:
+  app: myapp2
+
+patchesStrategicMerge:
+  - deployment.yaml
+
+secretGenerator:
+  - name: username
+    files:
+      - username=username.txt

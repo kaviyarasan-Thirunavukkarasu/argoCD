@@ -1,0 +1,21 @@
+namespace: production
+namePrefix: production-
+
+commonLabels:
+  app: myapp1
+
+secretGenerator:
+  - name: my-prod-secret
+    env: secret.properties
+
+images:
+  - name: devopsjourney1/mywebapp
+    newName: devopsjourney1/mywebapp
+    newTag: latest
+
+resources:
+  - ../../base
+  - namespace.yaml
+
+patchesStrategicMerge:
+  - deployment.yaml
