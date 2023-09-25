@@ -11,7 +11,7 @@ secretGenerator:
 images:
   - name: devopsjourney1/mywebapp
     newName: devopsjourney1/mywebapp
-    newTag: 25
+    newTag: 27
     
 resources:
   - ../../base
